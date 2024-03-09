@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <link href="https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "GmarketSans";
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #160c56;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #f0f7ff;
+            border: 8px solid #b4c0ce;
+            box-sizing: border-box;
+        }
+
+        main h1 a {
+            font-size: 7vw;
+            color: #cadbfb;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li a {
+            border: 1px dashed #e8e5ff;
+            color: #e4e0fe;
+            padding: 10px;
+            margin: 3px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #6e6e71;
+            color: #ffffff;
+        }
+
+        #wrap {
+            display: flex;
+        }
+
+        #aside {
+            width: 300px;
+            height: 100vh;
+            border: #aab7c6;
+            background-color: #a5aab1;
+        }
+
+        #aside nav {}
+
+        #aside nav ul {
+            display: flex;
+        }
+
+
+        #aside nav ul li {
+            margin: 3px;
+        }
+
+        #aside nav ul li a {
+            border: 1px solid #b5cce8;
+            color: #d4e5f9;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            line-height: 40px;
+            text-align: center;
+
+        }
+
+        #aside nav ul li.active a {
+            background-color: #160c56;
+            color: #fff;
+        }
+
+        #main {
+            width: calc(100% - 300px);
+            height: 100vh;
+        }
+
+        #main iframe {
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <nav id="nav">
+                <ul>
+                    <li class="active"><a href="layout/a1.html">a1</a></li>
+                    <li><a href="layout/a2.html">a2</a></li>
+                    <li><a href="layout/a3.html">a3</a></li>
+                    <li><a href="layout/a4.html">a4</a></li>
+                </ul>
+                <ul>
+                    <li><a href="layout/b1.html">b1</a></li>
+                    <li><a href="layout/b2.html">b2</a></li>
+                    <li><a href="layout/b3.html">b3</a></li>
+                    <li><a href="layout/b4.html">b4</a></li>
+                </ul>
+                <ul>
+                    <li><a href="layout/c1.html">c1</a></li>
+                    <li><a href="layout/c2.html">c2</a></li>
+                    <li><a href="layout/c3.html">c3</a></li>
+                    <li><a href="layout/c4.html">c4</a></li>
+                </ul>
+                <ul>
+                    <li><a href="layout/d1.html">d1</a></li>
+                    <li><a href="layout/d2.html">d2</a></li>
+                    <li><a href="layout/d3.html">d3</a></li>
+                    <li><a href="layout/d4.html">d4</a></li>
+                </ul>
+                <ul>
+                    <li><a href="layout/e1.html">e1</a></li>
+                    <li><a href="layout/e2.html">e2</a></li>
+                    <li><a href="layout/e3.html">e3</a></li>
+                    <li><a href="layout/e4.html">e4</a></li>
+                </ul>
+                <ul>
+                    <li><a href="layout/f1.html">f1</a></li>
+                    <li><a href="layout/f2.html">f2</a></li>
+                    <li><a href="layout/f3.html">f3</a></li>
+                    <li><a href="layout/f4.html">f4</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <iframe src="layout/a1.html"></iframe>
+
+        </main>
+
+    </div>
+
+    <script>
+        document.querySelectorAll("#nav ul li").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                let href = li.querySelector("a").getAttribute("href");
+
+                document.querySelector("#main iframe").setAttribute("src", href);
+
+                document.querySelectorAll("#nav ul li").forEach(el => {
+                    el.classList.remove("active");
+                });
+                li.classList.add("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

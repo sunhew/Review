@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 레이아웃 b-3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            background-color: #7d3b3b;
+
+        }
+
+        #header .header_container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #header .header_container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #231616;
+        }
+
+        #header .header_container .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #130a0a;
+        }
+
+        /* //header_container */
+
+        #slider {
+            width: 100%;
+        }
+
+        .slider_container {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #653737;
+        }
+
+        /* //slider_container */
+
+        #contents {
+            width: 100%;
+            height: 200px;
+        }
+
+        .contents_container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .content_container1 {
+            width: 400px;
+            height: 200px;
+            background-color: #a63b3b;
+        }
+
+        .content_container2 {
+            width: 400px;
+            height: 200px;
+            background-color: #522b2b;
+        }
+
+        .content_container3 {
+            width: 400px;
+            height: 200px;
+            background-color: #613737;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #1e1717;
+        }
+
+        .footer_container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .footer_container .footer1 {
+            width: 80%;
+            height: 100px;
+            background-color: #160303;
+        }
+
+        .footer_container .footer2 {
+            width: 20%;
+            height: 100px;
+            background-color: #808080;
+        }
+
+        .footer_container .footer2 .footer2-1 {
+            width: 100%;
+            height: 50px;
+            background-color: #281515;
+        }
+
+        .footer_container .footer2 .footer2-2 {
+            width: 100%;
+            height: 50px;
+            background-color: #878787;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header_container">
+                <div class="logo"></div>
+                <div class="nav"></div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <article id="slider">
+            <div class="slider_container"></div>
+        </article>
+        <!-- //silder -->
+
+        <main id="contents">
+            <div class="contents_container">
+                <div class="content_container1"></div>
+                <div class="content_container2"></div>
+                <div class="content_container3"></div>
+            </div>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="footer_container">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+
+
+</body>
+
+</html>
